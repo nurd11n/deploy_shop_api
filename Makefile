@@ -9,7 +9,7 @@ superuser:
 virtual:
 	source venv/bin/activate
 celery:
-	celery -A config worker --loglevel=info
+	celery -A config worker -l info
 test_account:
 	python3 manage.py test applications.account.tests
 test_views:
